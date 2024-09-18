@@ -66,9 +66,9 @@ function plugin_version_ticketfilteredpage()
     return [
         'name'           => 'TicketFilteredPage',
         'version'        => PLUGIN_TICKETFILTEREDPAGE_VERSION,
-        'author'         => '<a href="https://github.com/romannadym/TicketFilteredPage">Roman Yahin\'</a>',
+        'author'         => '<a href="https://github.com/romannadym/TicketFilteredPage/tree/master">Roman Yahin\'</a>',
         'license'        => 'GPLv3',
-        'homepage'       => 'https://github.com/romannadym/TicketFilteredPage',
+        'homepage'       => 'https://github.com/romannadym/TicketFilteredPage/tree/master',
         'requirements'   => [
             'glpi' => [
                 'min' => PLUGIN_TICKETFILTEREDPAGE_MIN_GLPI_VERSION,
