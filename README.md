@@ -1,11 +1,12 @@
 # TicketFilteredPage GLPI plugin
+Russian
+Для удобства отфильтрованные заявки выведены в отдельный пункт меню:
+- Я исполнитель
+- Я автор
+English
+For convenience, the filtered applications are displayed in a separate menu item:
+- I'm a performer
+- I am the author
 
-Add your plugin description here.
 
-## Contributing
-
-* Open a ticket for each bug/feature so it can be discussed
-* Follow [development guidelines](http://glpi-developer-documentation.readthedocs.io/en/latest/plugins/index.html)
-* Refer to [GitFlow](http://git-flow.readthedocs.io/) process for branching
-* Work on a new branch on your own fork
-* Open a PR that will be reviewed by a developer
+![image](https://github.com/user-attachments/assets/b8c5ae84-c5c1-49eb-bc37-904bbd1e455f)
