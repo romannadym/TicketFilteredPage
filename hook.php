@@ -48,3 +48,40 @@ function plugin_ticketfilteredpage_uninstall()
 {
     return true;
 }
+
+function plugin_ticketfilteredpage_redefine_menus($menu)
+{
+   if (empty($menu)) {
+      return $menu;
+   }
+
+   $front_fields = Plugin::getPhpDir('ticketfilteredpage', false) . "/front";
+   if (array_key_exists('ticketfilteredpage', $menu) === false) {
+           $menu['ticketfilteredpage'] = [
+               'default'   => "$front_fields/ticket.php",
+               'title'     => 'Мои обращения',
+               'types'   =>['ticket_i_assigned','ticket_i_author'],
+               'content'   => [
+                 'ticket_i_assigned'=>[
+                 'title'=>'Я исполнитель',
+                 'shortcut'=>'c',
+                 'page'=>"$front_fields/ticket.php?ticket_i_assigned=1",
+                 'lists_itemtype'=>'Ticket',
+                 'icon'=>'',
+                 'links'=>['lists'=>'']
+               ],
+               'ticket_i_author'=>[
+                 'title'=>'Я автор',
+                 'shortcut'=>'d',
+                 'page'=>"$front_fields/ticket.php?ticket_i_author=1",
+                 'lists_itemtype'=>'Ticket',
+                 'icon'=>'',
+                 'links'=>['lists'=>'']
+               ]
+             ],
+               'icon'  =>"fa-fw ti ti-report",
+           ];
+       }
+
+   return $menu;
+}

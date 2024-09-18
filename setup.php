@@ -47,6 +47,11 @@ function plugin_init_ticketfilteredpage()
     global $PLUGIN_HOOKS;
 
     $PLUGIN_HOOKS['csrf_compliant']['ticketfilteredpage'] = true;
+    if (!Session::haveRight('entity', READ))
+    {
+      $PLUGIN_HOOKS['redefine_menus']['ticketfilteredpage'] = 'plugin_ticketfilteredpage_redefine_menus';
+    }
+
 }
 
 
@@ -61,9 +66,9 @@ function plugin_version_ticketfilteredpage()
     return [
         'name'           => 'TicketFilteredPage',
         'version'        => PLUGIN_TICKETFILTEREDPAGE_VERSION,
-        'author'         => '<a href="http://www.teclib.com">Roman Yahin\'</a>',
-        'license'        => '',
-        'homepage'       => '',
+        'author'         => '<a href="https://github.com/romannadym/TicketFilteredPage">Roman Yahin\'</a>',
+        'license'        => 'GPLv3',
+        'homepage'       => 'https://github.com/romannadym/TicketFilteredPage',
         'requirements'   => [
             'glpi' => [
                 'min' => PLUGIN_TICKETFILTEREDPAGE_MIN_GLPI_VERSION,
