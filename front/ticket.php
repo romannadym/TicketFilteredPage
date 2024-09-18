@@ -62,7 +62,7 @@ if (container.length > 0 && container.data('js_class') !== undefined) {
 JS;
 
 echo Html::manageRefreshPage(false, $refresh_callback);
-
-Search::show('Ticket');
+$search = new PluginTicketfilteredpageSearch();
+$search->show('Ticket');
 
 Html::footer();
