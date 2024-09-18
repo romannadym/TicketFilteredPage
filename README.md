@@ -1,12 +1,12 @@
 # TicketFilteredPage GLPI plugin
 
-Russian
+Russian.
 Для удобства отфильтрованные заявки выведены в отдельный пункт меню:
  * Я исполнитель
  * Я автор
 
 
-English
+English.
 For convenience, the filtered applications are displayed in a separate menu item:
  * I'm a performer
  * I am the author
